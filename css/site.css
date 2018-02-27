@@ -22,7 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 
 html , body{
-background: url(../fondos/fondo2_mini.jpg) no-repeat center center fixed;
+background: url(../imgs/fondos/fondo2_mini.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
