@@ -1,0 +1,607 @@
+﻿
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--<!doctype html>
+<html lang="ES">
+-->
+
+
+<head>
+<meta charset="utf-8">
+
+
+
+
+<title>Mis Apps</title>
+
+
+<!--<link rel="stylesheet" href="css/site.css"/>
+<link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css"/>
+<script src="Jquery/jquery-1.6.3.min.js"></script>
+<script src="fancybox/jquery.fancybox-1.3.4.js"></script>
+--><!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>-->
+
+<!--<link rel="stylesheet" href="css/site.css"/>-->
+
+<!--Tamaño escritorio-->
+<link rel="stylesheet" media="(min-width: 1126px)" href="css/site.css"/>
+<!--Tamaño tablet-->
+<link rel="stylesheet" media="(max-width: 800px)" href="css/site_tablets.css"/>
+
+<link rel="stylesheet" href="fancyboxnew/source/jquery.fancybox.css"/>
+<script src="fancyboxnew/lib/jquery-1.10.1.min.js"></script>
+<script src="fancyboxnew/source/jquery.fancybox.pack.js"></script>
+
+
+<!--Scroll del menú https://www.youtube.com/watch?v=d8OzvhSiT3c-->
+<script src="js/smooth-scroll.min.js"></script>
+
+
+<!--Deshabilitar botón mouse -->
+<script type="text/javascript">
+document.oncontextmenu = function(){return false;}
+</script>
+
+
+<script>
+
+
+$(document).ready(function() {
+	
+	/*$("#galeria").each(function() {
+		
+		
+        $("#galeria").fadeOut(2000).fadeIn(2000);
+    });*/
+	
+	
+/*$('a.js-fancybox-iframe').fancybox({
+  type: 'iframe',
+  scrolling : 'visible',
+  width: 800,
+  height: "auto",
+  autoHeight: true,
+  onUpdate: function(){
+    $("iframe.fancybox-iframe");
+  }
+});*/
+	
+	/* This is basic - uses default settings */
+	
+	
+
+	
+	
+	$("a#single_image").fancybox();
+	
+	/* Using custom settings */
+	
+	$("a#inline").fancybox({
+		'hideOnContentClick': true
+	});
+
+  
+  	
+	//Identificamos la galeria y añadimos la función de la librería fancybox
+	$("#galeria a").fancybox({
+		
+		
+		overlayColor:"#797e79",//Color de la página al pulsar
+		overlayOpacity:.6,//Opacidad de la página al pulsar sobre las fotografías
+		transitionIn:"elastic",
+		transitionOut:"elastic",
+		
+			padding : 0,
+		titlePosition:"Outside",
+		cyclic:"false",//Imágenes en bucle
+		
+	 
+		
+	});
+	
+});
+
+/*Para inicializar el scroll del menú*/
+  smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+      callback: function ( anchor, toggle ) {} // Function to run after scrolling
+      });
+
+
+
+
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+
+<div class="cabecera">
+
+  <img src="imgs/Nosotros/paisaje_opt.jpg" width="180" height="215" alt="imagen">
+  
+  <p class="logo" align="center">Galería de algunas de mis Apps. en Android</p>
+</div>
+
+  <div class="sidebar1">
+  
+    <ul class="nav" >
+    	<li><a data-scroll  href="#agendaimagenes">Agenda con imágenes</a></li>
+        <li><a data-scroll  href="#localizaciones">Localizaciones</a></li>
+        <li><a data-scroll  href="#localadmin">Localizaciones II</a></li>
+    	<li><a data-scroll  href="#agendacomercial">Agenda Comercial</a></li>
+        <li><a data-scroll  href="#agendapersonal">Agenda Personal</a></li>
+        
+        <li><a data-scroll  href="#chat">Chat</a></li>
+        
+        <li><a data-scroll href="#navegarcontactos">Navegar hacia los contactos</a></li>
+        <li><a data-scroll href="#eltiempo">El tiempo</a></li>
+        <li><a data-scroll href="#adivinarnumero">Adivinar el número</a></li>
+        <li><a data-scroll href="#diccionario">Diccionario de la RAE</a></li>
+    </ul>
+    
+   
+</nav>
+    
+    
+    
+    
+    <aside class="aside">
+      <p>Galeria de imágenes realizada en HTML5. Está implementada con JQuery utilizando el plugin Fancybox. En ella se muestran imágenes así como una pequeña descripción técnica de algunas de las apps de código nativo Android realizadas por mí en los últimos meses. </p>
+      <p>Al hacer click en cualquiera de las imágenes se inicia la galería mostrando algunos screenshots de las activitys que conforman las distintas apps.</p>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  
+<section >  
+  <article class="article">
+
+  <h2>Imágenes de las apps. y pequeña descripción técnica</h2>
+  </article>
+ </section>
+
+
+  
+<section id="chat" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Chat</h1>
+        <p>
+Aplicación que permite a los usuarios mantener conversaciones en forma de chat. Posibilita la comunicación entre emisor y receptor, mostrando en sus Activitys información sobre si éstos se encuentran o no conectados y si están escribiendo cuando están chateando entre ellos. Los usuarios podrán incluir una imagen de perfil que será mostrada en las toolbars de las distintas activitys de la app y como icono de las notificaciones push recibidas. Además de enviar mensajes a modo de chat, posibilita también el envío de imágenes, la realización de fotografías para su posterior envío, el envío de mensajes que si se desea se borrarán automáticamente pasado un tiempo (Chat privado) así como el borrado de los mensajes propios una vez enviados. Los usuarios recibirán notificaciones push tanto en primer plano como en segundo plano emitiendo sonido, led de notificación y vibración.
+Realizada con Android Studio 3.0 utilizando Firebase 3 como plataforma de desarrollo. 
+Se han utilizado Cardviews y Recyclerviews para mostrar la información dentro de las Activitys incluyendo imágenes nine-path. Se han implementado adaptadores personalizados así como adaptadores del tipo FirebaseRecyclerAdapter para optimizar los datos y los eventos automáticos de Firebase.
+Entre las funcionalidades de Firebase utilizadas se encuentran la autenticación por email y por una cuenta de Google, la subida al servidor de las imágenes compartidas así como la imagen
+de perfil de usuario, la creación de una BB.DD. (NoSql), y el envío y la recepción de notificaciones push desde un servidor PHP a 'https://fcm.googleapis.com/fcm/send' para recepcionar las notificaciones tanto foreground como background.
+Se han utilizado las siguientes librerías externas en la elaboración del proyecto: Volley, Glide, Circleimageview:1.3.0, Compressor:2.1.0, Permiso:0.3.0 y Image-cropper:2.3.0.
+MinSdkVersion 15, targetSdkVersion 25, compileSdkVersion 25, buildToolsVersion "26.0.2"
+</p>
+   
+  <section>
+    <p>&nbsp;</p>
+  </section>
+	  <div id="galeria" class="galeria">
+		<a href="imgs/Chat/1.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/1.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/2.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/2.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/3.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/4.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/4.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/5.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/5.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/6.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/6.png" width="90" height="140" alt="Mis Apps"></a>
+        	<a href="imgs/Chat/7.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/7.png" width="90" height="140" alt="Mis Apps"></a>
+        	<a href="imgs/Chat/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/8.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/9.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/9.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/10.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/10.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/11.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/11.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/12.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/12.png" width="90" height="140" alt="Mis Apps"></a>
+        	<a href="imgs/Chat/13.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/13.png" width="90" height="140" alt="Mis Apps"></a>
+     		<a href="imgs/Chat/14.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/14.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/15.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/15.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/16.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/16.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/17.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/17.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/18.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/18.png" width="90" height="140" alt="Mis Apps"></a>	
+		<a href="imgs/Chat/19.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/19.png" width="90" height="140" alt="Mis Apps"></a>	
+		<a href="imgs/Chat/20.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/20.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Chat/21.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Chat/21.png" width="90" height="140" alt="Mis Apps"></a>
+        
+      </div>
+	</div>
+</div>
+</section>
+
+
+
+
+
+
+<section id="localadmin" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Localizaciones II. Mantenimiento</h1>
+        <p>
+Aplicación que conecta con un WebServices propio realizado en php que hace de frontal de una BB.DD. realizada en MySql. Ambos están alojados en la nube en un servidor web.
+La app. hace las tareas de administración de la app. Localizaciones, pudiendo realizarse la modificación y eliminación de los usuarios previamente dados de alta.
+También muestra las localizaciones de los usuarios registradas en la BB.DD. recogiéndolas en formato JSon utilizando la librería Volley. Las posiciones se muestran como marcadores según las especificaciones incluidas por google en su librería google Maps Api V2 play-services-maps:9.6.1. 
+El usuario administrador podrá ver las últimas posiciones de los demás usuarios dados de alta en la BB.DD. así como todas las posiciones de todos los usuarios desde distintas partes de la app. En uno de los mapas, al arrastrar los marcadores podrá iniciar una aplicación de chat y comunicarse con los distintos usuarios. Además  desde una de los fragment el usuario podrá contactar con el resto de los usuarios llamándoles por teléfono.
+Cuenta con un Navigation Drawer para mostrar los distintos menús, acceder a los fragments (generados de forma dinámica) y a las distintas activitys que la conforman donde se muestran los mapas y los recyclerviews con la información de los usuarios. También se han implementado transiciones que se muestran al realizarse la navegación entre las activitys. 
+Se han utilizado entre otras las siguientes librerias: 'com.jakewharton:butterknife:7.0.1', Volley así com.google.android.gms:play-services:9.6.1 para la creación de los mapas. MinSdkVersion 17, targetSdkVersion 24, compileSdkVersion 24, buildToolsVersion "24.0.1"
+</p>
+  
+  <section>
+    <p>&nbsp;</p>
+  </section>
+	  <div id="galeria" class="galeria">
+		<a href="imgs/LocalizacionesAdmin/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/2_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/2_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/3_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/3_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/4_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/4_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/5_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/5_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+     	<a href="imgs/LocalizacionesAdmin/8_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/8_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/9_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/10_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/10_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/11_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/11_opt.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/LocalizacionesAdmin/12_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/12_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/13_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/13_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+               
+		<a href="imgs/LocalizacionesAdmin/14_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/14_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/15_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/15_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/16_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/16_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/17_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/17_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/18_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/18_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/LocalizacionesAdmin/19_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/19_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/LocalizacionesAdmin/20_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/LocalizacionesAdmin/20_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<!--<a href="imgs/LocalizacionesAdmin/21_opt.png" rel="gallery" title="LocalizacionesAdmin"><img src="imgs/LocalizacionesAdmin/21_opt.png" width="90" height="140" alt="Mis Apps"></a>-->
+		
+        
+      </div>
+	</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section id="localizaciones" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Localizaciones</h1>
+        <p>
+Aplicación que conecta con un WebServices propio realizado en php que hace de frontal de una BB.DD. realizada en MySql. Ambos están alojados en la nube en un servidor web.
+En dicha BB.DD. se insertan de manera automática (cada 5 minutos y cuando la distancia cambie al menos 100m) datos referentes a la localización (fecha, longitud, latitud, velocidad, calle, número, población y teléfono) de los usuarios que estén previamente dados de alta en ella y que estén conectados. Estas localizaciones son recogidas en formato JSon y se muestran como marcadores en tres tipos distintos de mapas según las especificaciones incluidas por google en su librería google Maps Api V2 play-services-maps:8.4.0. Los usuarios al utilizar la app. podrán ver las últimas posiciones de los demás usuarios dados de alta en la misma, todas las posiciones de todos y todas sus posiciones propias, pinchando en las pestañas del TabHost incluido en la activity creada para mostrar mapas. La app. cuenta con otras tres activitys más: una de inicio que permite redirigir bien a una activity para poder logarse o bien a otra activity, donde los usuarios se podrán crear una cuenta para empezar a navegar por la aplicación. Se han utilizado entre otras las siguientes librerias: 'com.jakewharton:butterknife:7.0.1', volley y com.google.android.gms:play-services:8.4.0 para la creación de los mapas.
+MinSdkVersion 14, targetSdkVersion 23, compileSdkVersion 23, buildToolsVersion "23.0.2"</p>
+    <section>
+    <p>&nbsp;</p>
+  </section>
+		<div id="galeria" class="galeria">
+		<a href="imgs/Localizaciones/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/2_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/2_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/3_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/3_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/4_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/4_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/5_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/5_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+     	<a href="imgs/Localizaciones/8_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/8_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/9_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/10_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/10_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/11_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/11_opt.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/Localizaciones/12_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/12_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/13_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/13_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+               
+		<a href="imgs/Localizaciones/14_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/14_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/15_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/15_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/16_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/16_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/17_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/17_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/18_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/18_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/19_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/19_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/20_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/20_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/21_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/21_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Localizaciones/22_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/22_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Localizaciones/23_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Localizaciones/23_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+      </div>
+	</div>
+</div>
+</section>
+
+
+
+<section id="eltiempo" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Aplicación del tiempo</h1>
+        <p>Aplicación que conecta con la API: "Openweathermap". Esta API expone datos meteorológicos de más de 200000 ciudades. Los datos recogidos por la app. 
+        son por una parte la climatología en tiempo real, y por otra la previsión para los próximos cinco días mostrándose en intervalos de 3 horas.
+        La conexión al WS. se realiza utilizando la librería Volley y los datos son recogidos en formato Json.
+        Entre otras views o widgets se han utilizado: CoordinatorLayout, AppBarLayout, CollapsingToolbarLayout, RecyclerView, FloatingButton, TextView, ImageView y EditTex.
+        MinSdkVersion 14, targetSdkVersion 23, compileSdkVersion 23, buildToolsVersion "23.0.2"</p>
+    <section>
+    <p>&nbsp;</p>
+  </section>
+		<div id="galeria" class="galeria">
+		<a href="imgs/Eltiempo/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/2_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/2_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/3_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/3_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/4_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/4_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/5_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/5_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Eltiempo/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+     	<a href="imgs/Eltiempo/8_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/8_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/9_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/10_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/10_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Eltiempo/11_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/11_opt.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/Eltiempo/12_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/12_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Eltiempo/13_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Eltiempo/13_opt.png" width="90" height="140" alt="Mis Apps"></a>       
+
+
+      </div>
+	</div>
+</div>
+</section>
+
+
+
+
+<section id="navegarcontactos" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Navegar hacia mis contactos</h1>
+        <p>Aplicación que posiciona y/o dirije al usuario hacia la dirección que tengan asignados sus contactos. Cuenta con una BB.DD.
+        realizada en SqlLite. Recoge los contactos incluidos en el teléfono mediante un ContentResolver para guardarlo después 
+        en la BB.DD. y poder navegar desde la ubicación actual del usuario a la dirección que tengan asignada sus contactos.
+        Soporta el acceso a la búsqueda de los contactos incluidos en la BB.DD. tanto en modo escritura como en búsqueda por voz.
+        Entre otras views o widgets se han utilizado: CoordinatorLayout, AppBarLayout, CollapsingToolbarLayout, RecyclerView, SearchView, FloatingButton, TextInputLayout, CardView, Snackbar y Toolbar.
+        Aplicación implementada con Android Studio 1.5.1: minSdkVersion 14, targetSdkVersion 23, compileSdkVersion 23, buildToolsVersion "23.0.2"
+    </p>
+    
+      <section>
+    <p>&nbsp;</p>
+  </section>
+  
+		<div id="galeria" class="galeria">
+		<a href="imgs/Agendanavigation/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/2.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/2.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/3.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/4_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/4_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/5.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/5.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Agendanavigation/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Agendanavigation/8_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/8_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/9.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/9.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/10_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/10_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/11_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/11_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendanavigation/12_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/12_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendanavigation/13_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/13_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        
+        <a href="imgs/Agendanavigation/14_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/14_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendanavigation/15_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/15_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendanavigation/16_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/16_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendanavigation/17_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/17_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendanavigation/18_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendanavigation/18_opt.png" width="90" height="140" alt="Nuestos sitios"></a>
+        
+        
+        </div>
+	</div>
+</div>
+</section>
+
+ 
+ <section id="agendacomercial" class="section">
+      
+      <div class="contenido">
+         <div class="principal">
+		<h1>Agenda Comercial</h1>
+        <p>Aplicación con funcionalidad completa de agenda que gestiona los contactos de los clientes de los comerciales de la empresa. BB.DD. 
+		en Sqlite con total funcionalidad CRUD.Importa los contactos incluidos en la agenda de android 
+		(ContentResolver), así como los contactos incluidos en un Servicio Web REST con Json. Entre otras views o widgets se han utilizado: Searchview, NavigationView, 
+        ListView, Snackbar y Toolbar. Se ha utilizado Gson como librería externa. 
+		Implementada con Android Studio: minSdkVersion 15, targetSdkVersion 22, compileSdkVersion 22
+,buildToolsVersion "22.0.1" support:appcompat-v7:22.2.0 y support:design:22.
+        </p>
+        
+          <section>
+    		<p>&nbsp;</p>
+  		</section>
+  
+		<div id="galeria" class="galeria">
+		<a href="imgs/Nosotros/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/1_opt.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/2.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/2.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/3.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/4.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/4.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/5.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/5.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/6_opt.png" width="90" height="140" alt="Agenda Comercial"></a>
+        <a href="imgs/Nosotros/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/7_opt.png" width="90" height="140" alt="Agenda Comercial"></a>
+        <a href="imgs/Nosotros/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/8.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/9_opt.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/10.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/10.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/11.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/11.png" width="90" height="140" alt="Agenda Comercial"></a>
+		<a href="imgs/Nosotros/12.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/12.png" width="90" height="140" alt="Agenda Comercial"></a>
+        <a href="imgs/Nosotros/13.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Nosotros/13.png" width="90" height="140" alt="Agenda Comercial"></a>
+        </div>
+	</div>
+</div>
+</section>
+
+<section id="diccionario" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Diccionario de la RAE</h1>
+        <p>Aplicación que navega hacia el dicionario de la RAE recogiendo y mostrando la definición de la palabra buscada.
+        Entre otras views o widgets se han utilizado: Webview, CoordinatorLayout, AppBarLayout, CollapsingToolbarLayout, FloatingButton, TextInputLayout y CardView.
+        MinSdkVersion 14, targetSdkVersion 23, compileSdkVersion 23, buildToolsVersion "23.0.2"</p>
+  
+  <section>
+    <p>&nbsp;</p>
+  </section> 
+   
+		<div id="galeria" class="galeria">
+		<a href="imgs/Diccionario/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/2.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/2.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/3.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/4.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/4.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/5_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/5_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Diccionario/7.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/7.png" width="90" height="140" alt="Mis Apps"></a>
+        
+        <a href="imgs/Diccionario/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Diccionario/8.png" width="90" height="140" alt="Mis Apps"></a>
+<!--		<a href="imgs/Diccionario/9.png" rel="gallery" title="Mis Apps"><img src="imgs/Diccionario/9.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/10.png" rel="gallery" title="Mis Apps"><img src="imgs/Diccionario/10.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Diccionario/11.png" rel="gallery" title="Mis Apps"><img src="imgs/Diccionario/11.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/Diccionario/12.png" rel="gallery" title="Mis Apps"><img src="imgs/Diccionario/12.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Diccionario/13.png" rel="gallery" title="Mis Apps"><img src="imgs/Diccionario/13.png" width="90" height="140" alt="Nuestos sitios"></a>
+-->        
+
+
+      </div>
+	</div>
+</div>
+</section>
+
+<section id="agendaimagenes" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Agenda con imágenes</h1>
+        <p>Aplicación con funcionalidad completa de agenda que gestiona los contactos del usuario. Cuenta con una BB.DD realizada en  Sqlite (con total funcionalidad CRUD) en la que se guardan todos
+        los datos de los contactos incluida si se quiere, una imagen en formato comprimido. Esta imagen puede ser introducida desde la aplicación de la cámara o bien eligiendo
+        una imagen de la galería del teléfono. Se pueden importar los contactos incluidos en la agenda de android. Entre otras views o widgets se han utilizado: Searchview, NavigationView,
+		ListView, Toolbar, TextInputLayout y FloatingButton. Está implementada con Android Studio 1.5.: minSdkVersion 15, targetSdkVersion 22,
+		compileSdkVersion 22, buildToolsVersion "22.0.1"</p>
+        
+          <section>
+    		<p>&nbsp;</p>
+  			</section>
+        
+		<div id="galeria" class="galeria">
+		<a href="imgs/Agendaimagenes/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/2.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/2.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/3.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/4.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/4.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/5.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/5.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/6.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/6.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Agendaimagenes/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        
+        <a href="imgs/Agendaimagenes/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/8.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/9_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/10.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/10.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Agendaimagenes/11.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/11.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/Agendaimagenes/12.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/12.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Agendaimagenes/13.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Agendaimagenes/13.png" width="90" height="140" alt="Nuestos sitios"></a>
+        
+
+
+        </div>
+	</div>
+</div>
+</section>
+
+<section id="adivinarnumero" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Adivinar el número</h1>
+        <p>Pequeña app. que adivina el número introducido por el usuario. Cuenta con android.media.MediaPlayer para reproducir sonido mientras se juega.
+        Es posible hacer que este sonido desaparezca mediante una activity específica de configuración. Implementada con Android Studio 1.5.1: minSdkVersion 14, targetSdkVersion 23
+		compileSdkVersion 23, buildToolsVersion "23.0.2."</p>
+      <section>
+    	<p>&nbsp;</p>
+  		</section>
+    
+		<div id="galeria" class="galeria">
+		<a href="imgs/Adivinarnumero/1_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/1_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/2_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/2_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/3.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/3.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/4_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/4_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/5_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/5_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/6_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/6_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Adivinarnumero/7_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/7_opt.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/Adivinarnumero/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/8.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/9_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/Adivinarnumero/9_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<!--<a href="imgs/Adivinarnumero/10.png" rel="gallery" title="Mis Apps"><img src="imgs/Adivinarnumero/10.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/Adivinarnumero/11.png" rel="gallery" title="Mis Apps"><img src="imgs/Adivinarnumero/11.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<a href="imgs/Adivinarnumero/12.png" rel="gallery" title="Mis Apps"><img src="imgs/Adivinarnumero/12.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/Adivinarnumero/13.png" rel="gallery" title="Mis Apps"><img src="imgs/Adivinarnumero/13.png" width="90" height="140" alt="Nuestos sitios"></a>
+-->        
+
+
+      </div>
+	</div>
+</div>
+</section>
+
+
+
+<section id="agendapersonal" class="section">
+<div class="contenido">
+	<div class="principal">
+		<h1>Agenda personal</h1>
+        <p>Aplicación con funcionalidad completa de agenda que gestiona los contactos personales del teléfono. Cuenta con una BB.DD. 
+		 Sqlite con total funcionalidad CRUD. Se pueden importar los contactos incluidos en la agenda de android 
+		. Entre otras views o widgets se han utilizado: Searchview, NavigationView, 
+        ListView y Toolbar, TextInputLayout y FloatingButton. Como librerías externas se han utilizado de.hdodenhof:circleimageview:1.3.0 y com.melnykov:floatingactionbutton:1.3.0.  
+		Implementada con Android Studio: minSdkVersion 15, targetSdkVersion 22, compileSdkVersion 22
+		,buildToolsVersion "22.0.1" support:appcompat-v7:22.2.0 y support:design:22.</p>
+        
+          <section>
+    		<p>&nbsp;</p>
+  			</section>
+        
+		<div id="galeria" class="galeria">
+		<a href="imgs/AgendaPersonal/1.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/1.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/2_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/2_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/3_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/3_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/4.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/4.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/5.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/5.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/6.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/6.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/AgendaPersonal/7.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/7.png" width="90" height="140" alt="Mis Apps"></a>
+        <a href="imgs/AgendaPersonal/8.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/8.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/9.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/9.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/10_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/10_opt.png" width="90" height="140" alt="Mis Apps"></a>
+		<a href="imgs/AgendaPersonal/11_opt.png" rel="gallery" title="Click para ver la galería"><img src="imgs/AgendaPersonal/11_opt.png" width="90" height="140" alt="Mis Apps"></a>
+
+		<!--<a href="imgs/AgendaPersonal/12.png" rel="gallery" title="Mis Apps"><img src="imgs/AgendaPersonal/12.png" width="90" height="140" alt="Nuestos sitios"></a>
+        <a href="imgs/AgendaPersonal/13.png" rel="gallery" title="Mis Apps"><img src="imgs/AgendaPersonal/13.png" width="90" height="140" alt="Nuestos sitios"></a>
+-->        
+
+
+        </div>
+	</div>
+</div>
+</section>
+
+<!-- end .content -->
+  <aside>
+    <!--<h4>Fondos</h4>
+    <p>Por naturaleza, el color de fondo de cualquier elemento del bloque sólo se muestra a lo largo del contenido. Si desea usar una línea divisoria en lugar de un color, coloque un borde en el lado del bloque .content (pero sólo en el caso de que siempre vaya a tener más contenido).</p>
+-->  </aside>
+
+<footer class="footer">
+  
+  <address>
+      <p>Copyright 2017, antoniom.sanchezf@gmail.com</p>
+  </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>
